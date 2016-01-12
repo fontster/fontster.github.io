@@ -1,0 +1,268 @@
+/* Just some base styles not needed for example to function */
+html { font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+/* Makes the layout exapnd to 100% height without this css below won't work */
+html,body { height: 100%; }
+
+html, body, form, ul, li, p, h1, h2, h3, h4, h5
+{
+	margin: 0;
+	padding: 0;
+}
+img { border: none; }
+p
+{
+	margin: 0 0 1.308em 0; /* 17px */
+}
+ul { padding: 0 0 0 20px; }
+
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+	.clearfix { display: inline-block; }
+	html[xmlns] .clearfix { display: block; }
+	* html .clearfix { height: 1%; }
+
+html { font-size: 100%; /* IE hack */ }
+body { font-size: 0.75em; /* Sets base font size to 12px */ }
+table { font-size: 100%; /* IE hack */ }
+input, select, textarea, th, td { font-size: 1em; }
+
+body,
+#maincontainer
+{
+	background: #2B303B;
+	color: #ffffff;
+}
+
+#maincontainer
+{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+	/*  Basic table layout */
+	#maincontainer header#banner,
+	#maincontainer #content,
+	#maincontainer footer
+	{
+		display: table-row;
+	}
+
+#maincontainer header#banner
+{
+	padding: 30px 0 0;
+	display: table-cell;
+	border-bottom: 3.667em solid #fff; /* 44px */
+	margin: 0 0 1.333em;
+	height: 7.5em; /* 90px */
+}
+	#banner hgroup
+	{
+		display: block;
+		margin: 0;
+		border-bottom: 0.417em solid #A8DBA8; /* 5px */
+		height: 7.5em; /* 90px */
+	}
+	header#banner h1 {
+		text-shadow: 2px 2px 0px #FFFFFF; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+	}
+	header#banner h1,
+	header#banner h2
+	{
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 8.333em; /* 100px */
+		width: 960px;
+		margin: 0 auto;
+		color: #79BD9A;
+		text-indent: 127px;
+		white-space: nowrap;
+		height: 1.26em; /* 126px */
+
+	}
+	header#banner h2
+	{
+		font-size: 2.000em; /* 16px */
+		margin-top: -1.000em;
+		text-indent: 197px;
+		height: auto;
+		color: #0B486B;
+	}
+
+#content
+{
+	height: 100%;
+}
+	#content #content_inner
+	{
+		height: 100%;
+		width: 960px;
+		margin: 0 auto;
+		padding: 16px 0 30px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#content section
+	{
+		display: block;
+		width: 625px;
+		min-height: 100%;
+		float: left;
+		margin: 0 15px 0 0;
+	}
+	#content section:first-child
+	{
+		background-image: url("../img/dimension.png");
+		background-repeat: repeat repeat;
+    	background-color: #FFF;
+		width: 305px;
+
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	}
+		section header
+		{
+			background-color: #FF6B6B;
+			display: block;
+			padding: 18px 0 20px;
+			margin: 0 0 4px;
+
+			-moz-border-radius: 10px 10px 0 0;
+			-webkit-border-top-left-radius: 10px;
+			-webkit-border-top-right-radius: 10px;
+			border-radius: 10px 10px 0 0;
+
+		}
+			section header h1
+			{
+				text-align: center;
+				font-size: 1.833em;
+				line-height: 1;
+			}
+		ul#fonts
+		{
+			padding: 0;
+			margin: 0 15px 15px;
+		}
+			#fonts li
+			{
+				font-size: 1.5em; /* 18px */
+				line-height: 3.222em; /* 58px */
+				list-style: none;
+				height: 3.222em; /* 58px */
+				overflow: hidden;
+				cursor: pointer;
+				color: #111;
+			}
+				#fonts li span
+				{
+					width: 84px;
+					height: 2.222em; /* 40px */
+					line-height: 2.222em; /* 40px */
+					display: block;
+					float: left;
+					padding: 0 5px 0 0;
+					margin: 0.444em 0 0;
+					text-align: center;
+					overflow: hidden;
+				}
+				#fonts li span:first-child
+				{
+					width: 179px;
+					border-right: 2px solid #e5e5e5;
+				}
+			#fonts li:first-child { font-family: Verdana, Arial, Helvetica, sans-serif; } /* Apply example font to first item only */
+			#fonts li:hover,
+			#fonts li.active
+			{
+				background: #2B303B;
+				color: #FFF;
+			}
+	#content section:first-child:-moz-drag-over  { -moz-box-shadow: 5px 5px 40px #fff; }
+	#custom
+	{
+		padding: 1.167em 0 4.167em 1.333em; /* 14px/50px/16px */
+		position: relative;
+		background: #FFF !important;
+		color: #000 !important;
+
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-moz-border-radius: 5px 5px 5px 5px;
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-top-right-radius: 10px;
+		-webkit-border-bottom-left-radius: 10px;
+		-webkit-border-bottom-right-radius: 10px;
+		border-radius: 10px 10px 10px 10px;
+	}
+		#custom:before
+		{
+			display: none;
+			content: "This text is editable";
+			background: #56696d;
+			border: 1px solid #fff;
+			font-weight: bold;
+			left: 50%;
+			margin: 0 0 0 -70px;
+			opacity: 0.7;
+			padding: 5px;
+			position: absolute;
+			width: 140px;
+			text-align: center;
+
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+		}
+		#custom:hover 			{ }
+		#custom:hover:before 	{ display: block; top: -10px; }
+
+		#custom h1
+		{
+			color: #000;
+			font-size: 2.5em;
+			font-weight: normal;
+			margin: 0 0 0.633em; /* 19px */
+		}
+		#custom p,
+		#custom ul li
+		{
+			color: #000;
+			font-size: 1.083em;
+			line-height: 1.308em;
+		}
+		#custom ul li
+		{
+
+		}
+			#custom ul li li
+			{
+				font-size: 1em;
+			}
+
+footer
+{
+	height: 40px;
+	background-color: #1C1F26;
+	position: relative;
+	z-index: 1;
+}
+	footer p
+	{
+		margin: 0 auto;
+		width: 960px;
+		line-height: 40px;
+		font-size: 0.917em;
+	}
+	footer a.rightfooter	{ float: right; padding: 0 0 0 27px; }
+	footer a 			{ color: #fff; text-decoration: none; }
+	footer a:hover	{ text-decoration: underline; }
